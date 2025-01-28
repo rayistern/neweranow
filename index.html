@@ -210,6 +210,41 @@
 			display: none;
 		}
 	}
+	        /* Styles for the modal */
+			#video-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+			align-items: center;
+			justify-content: center;
+        }
+        #video-modal .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        #video-modal .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        /* Style for thumbnail image */
+        .video-thumbnail {
+            cursor: pointer;
+            width: 100%;
+            max-width: 500px;
+        }
 </style>
 
 <!-- <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='d325d7ec6347365942ea3f1c1da1f5902f12d731fcd021b67b5816bf146118b5';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumome.com/');</script> -->
@@ -309,7 +344,7 @@
 				<div class="text-center mb-5">
 					<div style="margin-top: 20px;">
 						<h3 class="display-4 fw-bolder ls1 mb-3 position-relative">Artificial<span class="gradient-text gradient-color">Wisdom</span></h3>
-						<p class="lead">New Era's efforts in bringing AI to Torah.</p>
+						<p class="lead">New Era's efforts in bringing AI to Torah. Learn more on our <a href="https://newerasolutions.substack.com/" target="_blank">blog</a>.</p>
 					</div>
 				</div>
 
@@ -322,56 +357,61 @@
 							<div class="entry-desc mb-auto">
 								<div class="badge text-bg-primary text-light rounded-pill fw-normal mb-2">In-Depth</div>
 								<div class="entry-title">
-									<h3 class="mb-0 fs-5 font-body fw-medium"><a href="https://arrendy.ai/blog/2024/03/09/mastering-documentation-the-why-amp-the-how-on-making-sense-of-implementations/">Mastering Documentation: The Why and the How on Making Sense of Implementations</a></h3>
+									<h3 class="mb-0 fs-5 font-body fw-medium"><a href="#">AI-Generated shiur on this year's Basi Legani</a></h3>
 								</div>
 							</div>
-							<div class="d-flex text-contrast-600 border-top mt-3 pt-3 small">
-<!-- 										<span>2 days ago</span>
-								<span class="mx-2">&middot;</span> -->
+<!-- 							<div class="d-flex text-contrast-600 border-top mt-3 pt-3 small">
+										<span>2 days ago</span>
+								<span class="mx-2">&middot;</span>
 								<span>5 min read</span>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
 					<div class="col-lg-4">
 						<div class="entry d-flex flex-column h-100 mb-0 bg-contrast-0 p-4 rounded-xxl" style="--cnvs-post-item-margin:0;">
-							<div class="entry-image mb-3">
-								<a href="https://www.youtube.com/?v=SZEflIVnhH8" data-lightbox="iframe">
-									<img src="images/chanukahlive1a.png" alt="Chanukah Live" class="rounded-6">
-								</a>
+							<!-- Video Thumbnail -->
+							<img src="https://img.youtube.com/vi/QstVAFB80eg/0.jpg" alt="YouTube Video" class="video-thumbnail mb-3" id="video-thumbnail" style="height: 352px; width: 100%; object-fit: cover; border-radius:12px;">
+
+							<!-- Video Modal -->
+							<div id="video-modal">
+								<a href="#" class="close" id="close-modal">&times;</a>
+								<div class="modal-content">
+									<iframe id="youtube-video" width="100%" height="500" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
 							</div>
 							<div class="entry-desc mb-auto">
 								<div class="badge text-bg-warning text-light rounded-pill fw-normal mb-2">Inspiration</div>
 								<div class="entry-title">
-									<h3 class="mb-0 fs-5 font-body fw-medium"><a href="https://youtu.be/QstVAFB80eg">Watch: AI revisiting the Chanukah Live interactive video call event from 1991.</a></h3>
+									<h3 class="mb-0 fs-5 font-body fw-medium"><a href="https://youtu.be/QstVAFB80eg" target="_blank">Watch: AI revisiting the Chanukah Live interactive video call event from 1991.</a></h3>
 								</div>
 							</div>
-							<div class="d-flex text-contrast-600 border-top mt-3 pt-3 small">
-<!-- 										<span>3 days ago</span>
-								<span class="mx-2">&middot;</span> -->
+<!-- 							<div class="d-flex text-contrast-600 border-top mt-3 pt-3 small">
+										<span>3 days ago</span>
+								<span class="mx-2">&middot;</span>
 								<span>6 min read</span>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
 					<div class="col-lg-4">
 						<div class="entry d-flex flex-column h-100 mb-0 bg-contrast-0 p-4 rounded-xxl" style="--cnvs-post-item-margin:0;">
 							<div class="entry-image mb-3">
-								<a href="https://arrendy.ai/blog/2024/03/10/navigating-ecommerce-software-when-less-is-more-and-when-to-go-industry-specific/">
-									<img src="images/chanukahlive1a.png" alt="Chanukah Live" class="rounded-6">
+								<a href="https://www.cobundle.ai/s/adNuweBFI3nXREOYDyiz" target="_blank">
+									<img src="images/cobundle2.png" alt="Chanukah Live" class="rounded-6" style="height: 352px; width: 100%; object-fit: cover;">
 								</a>
 							</div>
 							<div class="entry-desc mb-auto">
 								<div class="badge text-bg-danger text-light rounded-pill fw-normal mb-2">Interactive</div>
 								<div class="entry-title">
-									<h3 class="mb-0 fs-5 font-body fw-medium"><a href="https://arrendy.ai/blog/2024/03/10/navigating-ecommerce-software-when-less-is-more-and-when-to-go-industry-specific/">Navigating Ecommerce Software: When is Less More, and When to go Industry-Specific</a></h3>
+									<h3 class="mb-0 fs-5 font-body fw-medium"><a href="https://www.cobundle.ai/s/adNuweBFI3nXREOYDyiz" target="_blank">Chat with 50+ shiurim on Basi Legani 5725, 5745, and more.</a></h3>
 								</div>
 							</div>
-							<div class="d-flex text-contrast-600 border-top mt-3 pt-3 small">
-<!-- 										<span>3 days ago</span>
-								<span class="mx-2">&middot;</span> -->
+<!-- 							<div class="d-flex text-contrast-600 border-top mt-3 pt-3 small">
+										<span>3 days ago</span>
+								<span class="mx-2">&middot;</span>
 								<span>6 min read</span>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -388,7 +428,7 @@
 								<h2 class="display-4 fw-bold text-dark">Discover New Era Solutions</h2>
 								<p class="small mt-1 font-italic text-dark" style="font-size: 1.1rem;">
 									<strong style="font-family: 'Times New Roman', serif; font-size: 1.5rem;">proc·ess el·e·va·tion</strong> (n) <br>
-									The transformation of manual systems into intelligent workflows that unlock abundance.
+									Agents doing your manual work = abundance.
 								</p>
 							</div>
 						</div>
@@ -549,6 +589,31 @@
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
 
+    <script>
+        // JavaScript to handle the modal
+        var modal = document.getElementById('video-modal');
+        var thumbnail = document.getElementById('video-thumbnail');
+        var iframe = document.getElementById('youtube-video');
+        var closeBtn = document.getElementById('close-modal');
+
+        thumbnail.onclick = function () {
+            modal.style.display = "block";
+            iframe.src = "https://www.youtube.com/embed/QstVAFB80eg?autoplay=1";
+        };
+
+        closeBtn.onclick = function (e) {
+            e.preventDefault();
+            modal.style.display = "none";
+            iframe.src = "";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                iframe.src = "";
+            }
+        };
+    </script>
 	<script>
 		jQuery(document).ready(function(){
 			jQuery('.videoplay-on-hover').hover( function(){
