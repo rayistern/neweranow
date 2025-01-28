@@ -9,7 +9,7 @@
 :root {
 	--cnvs-themecolor: #0c0c0f;
 	--cnvs-themecolor-rgb: 62, 69, 235;
-	--cnvs-gradient-color: linear-gradient(to right, #0d0b3a, #575766);
+	--cnvs-gradient-color: linear-gradient(to right, #511bc4, #7d7dc6);
 
 
 
@@ -29,7 +29,8 @@
 	--cnvs-body-font: 'Poppins', sans-serif;
 	--cnvs-secondary-font: 'Poppins', cursive;
 	--cnvs-other-font: 'Marcellus', serif;
-
+/* 	--cnvs-body-image: url('../images/background.png');
+ */
 	--cnvs-slider-arrow-color: var(--cnvs-contrast-300);
 	--cnvs-slider-arrows-bg-color: transparent;
 	--cnvs-slider-arrows-bg-hover-color: var(--cnvs-slider-arrows-bg-color);
@@ -80,7 +81,7 @@
 
 #wrapper {
 	background: var(--cnvs-body-bg);
-	background-image: var(--cnvs-body-image);
+	background-image: url('../images/background.png');
 	background-repeat: repeat-y;
 	background-position: center top;
 	background-size: 100% auto;
