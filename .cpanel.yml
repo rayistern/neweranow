@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/neweamrn/staging
+    - export DEPLOYPATH=/home/neweamrn/rayistern
     - /bin/cp -r ./* $DEPLOYPATH
